@@ -32,13 +32,13 @@ def run(env, cmd){
                 string(credentialsId: "${env}-aws-access-key", variable: "AWS_ACCESS_KEY"),
                 string(credentialsId: "${env}-aws-secret-access-key", variable: "AWS_SECRET_ACCESS_KEY"),
                 string(credentialsId: "${env}-aws-region", variable: "AWS_REGION"),
-                string(credentialsId: "egov_secret_passcode", variable: "EGOV_SECRET_PASSCODE")
+                string(credentialsId: "pwcqa_secret_passcode", variable: "PWCQA_SECRET_PASSCODE")
             ]){
                 sh cmd;
             }
     } else{
             withCredentials([
-                string(credentialsId: "egov_secret_passcode", variable: "EGOV_SECRET_PASSCODE")
+                string(credentialsId: "pwcqa_secret_passcode", variable: "PWCQA_SECRET_PASSCODE")
             ]){
                 sh cmd;
             }        
