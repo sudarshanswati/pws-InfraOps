@@ -15,7 +15,7 @@ def main():
     if padding_length % 16 != 0 :
         padding_length = padding_length + (16 - padding_length % 16)
 
-    key = os.environ["EGOV_SECRET_PASSCODE"]
+    key = os.environ["PWCQA_SECRET_PASSCODE"]
     encryptor = AES.new(key, AES.MODE_ECB)
     print base64.b64encode(encryptor.encrypt(text_to_encrypt.rjust(padding_length)))
 
