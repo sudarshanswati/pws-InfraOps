@@ -41,6 +41,7 @@ def run(env, cmd){
                 string(credentialsId: "pwcqa_secret_passcode", variable: "PWCQA_SECRET_PASSCODE")
             ]){
                 sh cmd;
+                echo $PWCQA_SECRET_PASSCODE;
             }        
         }
 
