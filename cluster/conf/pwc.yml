@@ -196,7 +196,7 @@ egf-master:
   images:
     - egovio/egf-master
   db_migration_image: egovio/egf-master-db
-  db-url: "jdbc:postgresql://pwc-db.postgres.database.azure.com:5432/pwc-db"
+  db-url: "jdbc:postgresql://pwc-qa-db.postgres.database.azure.com:5432/pwc-qa-db"
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
 
@@ -414,9 +414,9 @@ egov-weekly-impact-notifier:
 
 egov-config:
   sms-enabled: "true"
-  db-url: "jdbc:postgresql://pwc-db.postgres.database.azure.com:5432/pwc-db"
-  db-host: "pwc-db.postgres.database.azure.com"
-  db-name: "pwc-db"
+  db-url: "jdbc:postgresql://pwc-qa-db.postgres.database.azure.com:5432/pwc-qa-db"
+  db-host: "pwc-qa-db.postgres.database.azure.com"
+  db-name: "pwc-qa-db"
   kafka-brokers: "kafka-v2.kafka-cluster:9092"
   spring-datasource-tomcat-initialSize: "1"
   spring-datasource-tomcat-max-active: "2"
@@ -574,14 +574,12 @@ redis:
 
 # secrets >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 db-secret:
-  username: fzobm4j2UBLFbUokeU9/YQ==
-  password: iBRjFhuESCAPRjWyA6GVJ1a/yFcYtu1mxI5IOlVFoWg=
-  flyway-username: fzobm4j2UBLFbUokeU9/YQ==
-  flyway-password: iBRjFhuESCAPRjWyA6GVJ1a/yFcYtu1mxI5IOlVFoWg=
+  username: +BIbQ6Q7Yzi4GOj/TZsteA==
+  password: TIvis/PC3I+HPw38bG/40Fy41PBFR+8sGzdi6tYFyVg=
+  flyway-username: +BIbQ6Q7Yzi4GOj/TZsteA==
+  flyway-password: TIvis/PC3I+HPw38bG/40Fy41PBFR+8sGzdi6tYFyVg=
 
-egov-notification-sms-secret:
-  username: SUXPxnqcJGuM4ou3u3cPnbhoh3klvvO9UJZz2Dyxup8=
-  password: SUXPxnqcJGuM4ou3u3cPnaRuu8aCiSB2DvkGDAJidIo=
+
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -672,7 +670,7 @@ zookeeper-v2:
   heap: "-Xms256M -Xmx256M"
   storage-size: "5Gi"
   azure-disk:
-    - /subscriptions/9d341459-0caf-4d4b-9a61-347f7701aefb/resourceGroups/MC_pwc-egov_pwc_southeastasia/providers/Microsoft.Compute/disks/zookeeper-0
+    - /subscriptions/9d341459-0caf-4d4b-9a61-347f7701aefb/resourceGroups/MC_pwc-qa_pwc-qa_southeastasia/providers/Microsoft.Compute/disks/zookeeper-0
     - /subscriptions/9d341459-0caf-4d4b-9a61-347f7701aefb/resourceGroups/MC_pwc-egov_pwc_southeastasia/providers/Microsoft.Compute/disks/zookeeper-1
     - /subscriptions/9d341459-0caf-4d4b-9a61-347f7701aefb/resourceGroups/MC_pwc-egov_pwc_southeastasia/providers/Microsoft.Compute/disks/zookeeper-2
 
