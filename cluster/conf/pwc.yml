@@ -392,9 +392,9 @@ egov-weekly-impact-notifier:
 
 egov-config:
   sms-enabled: "true"
-  db-url: "jdbc:postgresql://pwc-qa-db.postgres.database.azure.com:5432/pwc_qa_db"
-  db-host: "pwc-qa-db.postgres.database.azure.com"
-  db-name: "pwc_qa_db"
+  db-url: "jdbc:postgresql://pwc-db.postgres.database.azure.com:5432/pwc_db"
+  db-host: "pwc-db.postgres.database.azure.com"
+  db-name: "pwc_db"
   kafka-brokers: "kafka-v2.kafka-cluster:9092"
   spring-datasource-tomcat-initialSize: "1"
   spring-datasource-tomcat-max-active: "2"
