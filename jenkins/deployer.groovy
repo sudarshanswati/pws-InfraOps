@@ -1,4 +1,4 @@
-deployer_image = "egovio/deployer:1.0.0"
+deployer_image = "devops1806/01082019-bpa:v01082019"
 
 def takeSnapshot(group, env){
     stage("Snapshot ${env} env"){
@@ -16,7 +16,7 @@ def deploy(env){
 
 def deployStandAlone(env, service, image, tag){
     stage("Deploy to ${env} env"){
-        def cmd = "python scripts/apply.py  -e ${env} -m ${service} -i egovio/${image}:${tag} -dmi egovio/${image}-db:${tag} -conf -secret"
+        def cmd = "python scripts/apply.py  -e ${env} -m ${service} -i devops1806/${image}:${tag} -dmi devops1806/${image}-db:${tag} -conf -secret"
         run(env, cmd)
     }
 }
